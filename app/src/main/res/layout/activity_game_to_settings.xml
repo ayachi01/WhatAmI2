@@ -8,10 +8,9 @@
     tools:context=".Activity_Game_to_Settings">
 
     <View
-        android:id="@+id/brownbar"
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="#674636"
+        style="@style/BAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -21,12 +20,12 @@
 
 
     <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo_bhaijaan"
-        android:text="settings"
+        android:text="@string/settingss"
         android:textSize="45sp"
+        style="@style/TEXT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,8 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo_bhaijaan"
-        android:text="music"
-        style="@style/TEXT"
+        android:text="@string/music"
+        style="@style/MDTEXT"
         android:padding="15dp"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,12 +64,12 @@
 
     <Switch
         android:id="@+id/darkmode"
-        style="@style/TEXT"
+        style="@style/MDTEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo_bhaijaan"
         android:padding="15dp"
-        android:text="dark mode"
+        android:text="@string/dark_mode"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,13 +80,12 @@
         tools:ignore="UseSwitchCompatOrMaterialXml" />
     <Button
         android:id="@+id/backtogame"
-        android:layout_width="155dp"
+        android:layout_width="160dp"
         android:layout_height="70dp"
         android:layout_marginTop="628dp"
-        android:backgroundTint="#E9D0A5"
-        android:textColor="#ffffff"
+        style="@style/BUTTONS"
         android:fontFamily="@font/baloo_bhaijaan"
-        android:text="Back"
+        android:text="@string/back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,13 +94,12 @@
 
     <Button
         android:id="@+id/quit"
-        android:layout_width="155dp"
+        android:layout_width="160dp"
         android:layout_height="70dp"
         android:layout_marginTop="712dp"
-        android:backgroundTint="#E9D0A5"
+        style="@style/BUTTONS"
         android:fontFamily="@font/baloo_bhaijaan"
-        android:text="Quit"
-        android:textColor="#ffffff"
+        android:text="@string/quit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

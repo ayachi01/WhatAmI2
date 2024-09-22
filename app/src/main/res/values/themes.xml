@@ -3,11 +3,9 @@
     <style name="Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
-    <style name="SCREEN">
-        <item name="android:background">#FFF8E8</item>"
-    </style>
+        <item name="android:windowBackground">@color/screen</item>"
 
+    </style>
     <style name="TEXT">
         <item name="android:textColor">#BC9F8B</item>
     </style>
@@ -18,7 +16,7 @@
     <!-- BUTTONS FOR LIGHT THEME. -->
     <style name="BUTTONS">
         <item name="android:textColor">#ffffff</item>
-        <item name="android:backgroundTint">#E9D0A5</item>
+        <item name="android:backgroundTint">#E0C390</item>
     </style>
     <!-- BAR FOR LIGHT THEME. -->
     <style name="BAR">
