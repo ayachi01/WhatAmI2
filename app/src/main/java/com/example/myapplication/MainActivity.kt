@@ -2,28 +2,33 @@ package com.example.myapplication
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.media.AudioFocusRequest
 import android.media.AudioManager
 import android.media.MediaPlayer
 import android.media.SoundPool
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SwitchCompat
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-
     private lateinit var start: Button
     private lateinit var settings: Button
     private var mediaPlayer: MediaPlayer? = null
-    private lateinit var darkmode: SwitchCompat
-
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
+    private lateinit var screen: View
+    private lateinit var text: TextView
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,11 +58,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent2)
         }
 
-
         val mediaPlayer = MediaPlayer.create(this, R.raw.music)
         mediaPlayer.start()
         mediaPlayer.isLooping = true
-
 
         val audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
         val audioFocusRequest = AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN)
@@ -70,16 +73,51 @@ class MainActivity : AppCompatActivity() {
             }
             .build()
         audioManager.requestAudioFocus(audioFocusRequest)
+
+        sharedPreferences = getSharedPreferences("dark_mode_pref", Context.MODE_PRIVATE)
+        editor = sharedPreferences.edit()
+
+        val isDarkModeEnabled = sharedPreferences.getBoolean("is_dark_mode_enabled", false)
+        updateUI(isDarkModeEnabled)
+
+        screen = findViewById(R.id.screen)
+        text = findViewById(R.id.text)
+
+        if (isDarkModeEnabled) {
+            updateDarkModeUI()
+        } else {
+            updateLightModeUI()
+        }
     }
 
+    private fun updateUI(isDarkModeEnabled: Boolean) {
+        if (isDarkModeEnabled) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
+    }
+
+    private fun updateDarkModeUI() {
+        start.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
+        start.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
+        settings.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
+        settings.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
+        screen.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_screen))
+        text.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
+    }
+
+    private fun updateLightModeUI() {
+        start.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
+        start.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
+        settings.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
+        settings.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
+        screen.setBackgroundColor(ContextCompat.getColor(this, R.color.screen))
+        text.setTextColor(ContextCompat.getColor(this, R.color.light_mode_text))
+    }
 
     override fun onResume() {
         super.onResume()
         mediaPlayer?.release()
     }
-
-    override fun onPause() {
-        super.onPause()
-    }
-
-    }
+}

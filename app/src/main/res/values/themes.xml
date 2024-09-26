@@ -3,29 +3,63 @@
     <style name="Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="android:windowBackground">@color/screen</item>"
-
     </style>
+    <style name="screen">
+        <item name="android:background">@color/screen</item>
+    </style>
+    <!-- TEXT for light theme -->
     <style name="TEXT">
-        <item name="android:textColor">#BC9F8B</item>
+        <item name="android:textColor">@color/light_mode_text</item>
     </style>
-    <!-- MUSIC AND DARK MODE TEXT FOR LIGHT THEME. -->
+    <!-- MUSIC AND DARK MODE TEXT for light theme -->
     <style name="MDTEXT">
-        <item name="android:textColor">#4c4c4c</item>
+        <item name="android:textColor">@color/light_mode_mdtext</item>
     </style>
-    <!-- BUTTONS FOR LIGHT THEME. -->
+    <!-- BUTTONS for light theme -->
     <style name="BUTTONS">
-        <item name="android:textColor">#ffffff</item>
-        <item name="android:backgroundTint">#E0C390</item>
+        <item name="android:textColor">@color/light_mode_buttons_text</item>
+        <item name="android:backgroundTint">@color/light_mode_buttons</item>
     </style>
-    <!-- BAR FOR LIGHT THEME. -->
+    <!-- BAR for light theme -->
     <style name="BAR">
-        <item name="android:background">#674636</item>
+        <item name="android:background">@color/light_mode_bar</item>
     </style>
-    <!-- SUBMIT BUTTON FOR LIGHT THEME. -->
+
+    <!-- SUBMIT BUTTON for light theme -->
     <style name="SUBMIT">
-        <item name="android:textColor">#ffffff</item>
-        <item name="android:backgroundTint">#7A523F</item>
+        <item name="android:textColor">@color/light_mode_submit_text</item>
+        <item name="android:backgroundTint">@color/light_mode_submit</item>
+    </style>
+
+
+    <!-- Dark theme -->
+    <style name="Theme.MyApplication.Dark" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/screen.dark</item>
+    </style>
+    <!-- BUTTONS for dark theme -->
+    <style name="BUTTONS.Dark">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:backgroundTint">#333333</item>
+    </style>
+
+    <!-- SUBMIT BUTTON for dark theme -->
+    <style name="SUBMIT.Dark">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:backgroundTint">#444444</item>
+    </style>
+
+    <!-- MUSIC AND DARK MODE TEXT for dark theme -->
+    <style name="MDTEXT.Dark">
+        <item name="android:textColor">#CCCCCC</item>
+    </style>
+
+    <!-- TEXT for dark theme -->
+    <style name="TEXT.Dark">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <!-- BAR for dark theme -->
+    <style name="BAR.Dark">
+        <item name="android:background">#333333</item>
     </style>
 
 </resources>

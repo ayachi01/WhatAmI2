@@ -17,5 +17,6 @@
     <string name="best">Best</string>
     <string name="score">Score</string>
     <string name="submit">Submit</string>
+    <string name="change_theme">Change Theme</string>
 
 </resources>

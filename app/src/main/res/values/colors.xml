@@ -2,5 +2,30 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- SCREEN LIGHT THEME.. -->
     <color name="screen">#FFF8E8</color>
+    <!-- SCREEN DARK THEME.. -->
+    <color name="screen.dark">#000000</color>
+
+
+    <!-- UI ELEMENTS FOR LIGHT THEME.. -->
+    <color name="light_mode_text">#BC9F8B</color>
+    <color name="light_mode_mdtext">#4c4c4c</color>
+    <color name="light_mode_buttons">#E0C390</color>
+    <color name="light_mode_buttons_text">#ffff</color>
+    <color name="light_mode_bar">#674636</color>
+    <color name="light_mode_submit_text">#ffffff</color>
+    <color name="light_mode_submit">#7A523F</color>
+
+    <!-- UI ELEMENTS FOR DARK THEME.. -->
+    <color name="dark_mode_text">#FFFFFF</color>
+    <color name="dark_mode_mdtext">#CCCCCC</color>
+    <color name="dark_mode_buttons">#FFFFFF</color>
+    <color name="dark_mode_buttons_text">#000000</color>
+    <color name="dark_mode_bar">#FFFFFF</color>
+    <color name="dark_mode_submit">#FFFFFF</color>
+    <color name="dark_screen">#333333</color>
+    <color name="dark_primary">#444444</color>
+    <color name="dark_primary_dark">#555555</color>
+    <color name="dark_accent">#FFC107</color>
 </resources>
