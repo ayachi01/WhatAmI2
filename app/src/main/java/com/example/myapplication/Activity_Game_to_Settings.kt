@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -14,8 +15,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class Activity_Game_to_Settings : AppCompatActivity() {
 
@@ -29,8 +28,10 @@ class Activity_Game_to_Settings : AppCompatActivity() {
     private lateinit var musictext: TextView
     private lateinit var darkmode: TextView
     private lateinit var screen: View
+    private lateinit var Restarttext : TextView
+    private lateinit var Restart : Button
 
-
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -78,7 +79,7 @@ class Activity_Game_to_Settings : AppCompatActivity() {
         })
         music.progress = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC)
 
-        ChangeTheme = findViewById(R.id.ChangeTheme)
+        this.ChangeTheme = findViewById(R.id.ChangeTheme)
         sharedPreferences = getSharedPreferences("dark_mode_pref", Context.MODE_PRIVATE)
         editor = sharedPreferences.edit()
 
@@ -91,6 +92,8 @@ class Activity_Game_to_Settings : AppCompatActivity() {
         musictext = findViewById(R.id.musictext)
         darkmode = findViewById(R.id.darkmode)
         screen = findViewById(R.id.screen)
+        Restarttext = findViewById(R.id.Restarttext)
+        Restart = findViewById(R.id.Restart)
 
         // Set the dark mode button listener
         ChangeTheme.setOnClickListener {
@@ -123,6 +126,9 @@ class Activity_Game_to_Settings : AppCompatActivity() {
             ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
             quit.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
             quit.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
+            Restarttext.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
+            Restart.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
+            Restart.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
 
         } else {
             // Update UI elements for light mode
@@ -138,6 +144,9 @@ class Activity_Game_to_Settings : AppCompatActivity() {
             ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
             quit.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
             quit.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
+            Restarttext.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
+            Restart.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
+            Restart.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
         }
     }
 }

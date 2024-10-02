@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editor: SharedPreferences.Editor
     private lateinit var screen: View
     private lateinit var text: TextView
+    private lateinit var howtoplay: Button
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,6 +57,13 @@ class MainActivity : AppCompatActivity() {
             soundPool.play(soundId, 1f, 1f, 1, 0, 1f)
             val intent2 = Intent(this, Activity_Game::class.java)
             startActivity(intent2)
+        }
+
+        this.howtoplay = findViewById(R.id.howtoplay)
+        howtoplay.setOnClickListener {
+            soundPool.play(soundId, 1f, 1f, 1, 0, 1f)
+            val intent3 = Intent(this, How_To_Play::class.java)
+            startActivity(intent3)
         }
 
         val mediaPlayer = MediaPlayer.create(this, R.raw.music)
@@ -105,6 +113,8 @@ class MainActivity : AppCompatActivity() {
         settings.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
         screen.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_screen))
         text.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
+        howtoplay.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
+        howtoplay.setTextColor(ContextCompat.getColor(this,R.color.dark_mode_buttons_text))
     }
 
     private fun updateLightModeUI() {

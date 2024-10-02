@@ -4,21 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity_Settings">
-
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/screen"
-        style="@style/screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        style="@style/screen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/brownbar"
@@ -32,13 +28,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.165" />
 
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo_bhaijaan"
-        android:text="@string/settingss"
+        android:text="@string/howtoplay"
         android:textSize="45sp"
         style="@style/TEXT"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,71 +42,43 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.06" />
 
+
     <TextView
-        android:id="@+id/musictext"
+        android:id="@+id/instructions"
         style="@style/MDTEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo_bhaijaan"
-        android:padding="13dp"
-        android:text="@string/music"
-        android:textSize="35sp"
+        android:fontFamily="@font/fira_code_light"
+        android:lineSpacingExtra="8sp"
+        android:text="@string/instructions"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
-
-
-    <SeekBar
-        android:id="@+id/music"
-        android:layout_width="308dp"
-        android:layout_height="18dp"
-        android:maxHeight="16dp"
-        android:minHeight="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348"
-        app:trackHeight="25dp" />
-
+        app:layout_constraintVertical_bias="0.294" />
 
     <TextView
-        android:id="@+id/darkmode"
+        android:id="@+id/scoringbase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fira_code_light"
+        android:lineSpacingExtra="8sp"
         style="@style/MDTEXT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo_bhaijaan"
-        android:padding="13dp"
-        android:text="@string/dark_mode"
-        android:textSize="35sp"
+        android:text="@string/scoringbase"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
+        app:layout_constraintVertical_bias="0.577" />
 
     <Button
-        android:id="@+id/ChangeTheme"
-        style="@style/BUTTONS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo_bhaijaan"
-        android:text="@string/change_theme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.834"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
-
-
-    <Button
-        android:id="@+id/backtogame"
+        android:id="@+id/backtohome"
         style="@style/BUTTONS"
         android:layout_width="160dp"
         android:layout_height="70dp"

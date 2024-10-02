@@ -7,19 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <View
         android:id="@+id/screen"
+        style="@style/screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        style="@style/screen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <TextView
         android:id="@+id/text"
+        style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo_bhaijaan"
@@ -27,33 +31,44 @@
         android:text="@string/what_am_i"
         android:textSize="50sp"
         android:typeface="normal"
-        style="@style/TEXT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.368" />
-
+        app:layout_constraintVertical_bias="0.349" />
 
     <Button
         android:id="@+id/settings"
         style="@style/BUTTONS"
-        android:layout_width="160dp"
+        android:layout_width="175dp"
         android:layout_height="70dp"
         android:fontFamily="@font/baloo_bhaijaan"
         android:text="@string/settings"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.628" />
+        app:layout_constraintVertical_bias="0.616" />
+
+    <Button
+        android:id="@+id/howtoplay"
+        style="@style/BUTTONS"
+        android:layout_width="175dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/baloo_bhaijaan"
+        android:text="How to Play"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
 
     <Button
         android:id="@+id/start"
         style="@style/BUTTONS"
-        android:layout_width="160dp"
+        android:layout_width="175dp"
         android:layout_height="70dp"
         android:backgroundTintMode="add"
         android:fontFamily="@font/baloo_bhaijaan"
@@ -61,10 +76,9 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.526" />
+        app:layout_constraintVertical_bias="0.52" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

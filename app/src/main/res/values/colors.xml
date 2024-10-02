@@ -19,7 +19,7 @@
 
     <!-- UI ELEMENTS FOR DARK THEME.. -->
     <color name="dark_mode_text">#FFFFFF</color>
-    <color name="dark_mode_mdtext">#CCCCCC</color>
+    <color name="dark_mode_mdtext">#E9E9E9</color>
     <color name="dark_mode_buttons">#FFFFFF</color>
     <color name="dark_mode_buttons_text">#000000</color>
     <color name="dark_mode_bar">#FFFFFF</color>

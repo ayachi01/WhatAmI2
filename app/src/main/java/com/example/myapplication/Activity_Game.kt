@@ -26,10 +26,7 @@ class Activity_Game : AppCompatActivity() {
     private lateinit var screen: View
     private lateinit var text: TextView
     private lateinit var howtoplay: TextView
-    private lateinit var Lives: TextView
-    private lateinit var Timer: TextView
     private lateinit var BAR: View
-    private lateinit var BAR2: View
     private lateinit var submitanswer: Button
 
 
@@ -56,11 +53,9 @@ class Activity_Game : AppCompatActivity() {
 
         screen = findViewById(R.id.screen)
         text = findViewById(R.id.WhatAmI)
-        howtoplay = findViewById(R.id.howtoplay)
-        Lives = findViewById(R.id.Lives)
-        Timer = findViewById(R.id.Timer)
+        //Lives = findViewById(R.id.Lives)
+        //Timer = findViewById(R.id.Timer)
         BAR = findViewById(R.id.BAR)
-        BAR2 = findViewById(R.id.BAR2)
         submitanswer = findViewById(R.id.submitanswer)
 
         if (isDarkModeEnabled) {
@@ -79,29 +74,21 @@ class Activity_Game : AppCompatActivity() {
     }
 
     private fun updateDarkModeUI() {
-        howtoplay.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
-        Timer.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
-        Lives.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
         settings2.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
         settings2.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
         screen.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_screen))
         text.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
         BAR.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_bar))
-        BAR2.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_bar))
         submitanswer.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
         submitanswer.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
     }
 
     private fun updateLightModeUI() {
-        howtoplay.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
-        Timer.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
-        Lives.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
         settings2.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
         settings2.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
         screen.setBackgroundColor(ContextCompat.getColor(this, R.color.screen))
         text.setTextColor(ContextCompat.getColor(this, R.color.light_mode_text))
         BAR.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_bar))
-        BAR2.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_bar))
         submitanswer.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_submit))
         submitanswer.setTextColor(ContextCompat.getColor(this, R.color.light_mode_submit_text))
 
