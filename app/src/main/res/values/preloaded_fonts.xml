@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/aoboshi_one</item>
+        <item>@font/archivo_black</item>
+        <item>@font/archivo_bold</item>
+        <item>@font/archivo_thin</item>
         <item>@font/baloo_bhaijaan</item>
         <item>@font/commissioner_thin</item>
+        <item>@font/denk_one</item>
         <item>@font/fira_code_light</item>
         <item>@font/galdeano</item>
+        <item>@font/viga</item>
+        <item>@font/work_sans_bold</item>
+        <item>@font/work_sans_medium</item>
     </array>
 </resources>

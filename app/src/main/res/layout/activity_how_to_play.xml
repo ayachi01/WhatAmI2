@@ -48,7 +48,7 @@
         style="@style/MDTEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/fira_code_light"
+        android:fontFamily="sans-serif"
         android:lineSpacingExtra="8sp"
         android:text="@string/instructions"
         android:textAlignment="center"
@@ -59,15 +59,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.294" />
+        app:layout_constraintVertical_bias="0.284" />
 
     <TextView
         android:id="@+id/scoringbase"
+        style="@style/MDTEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/fira_code_light"
+        android:fontFamily="sans-serif"
         android:lineSpacingExtra="8sp"
-        style="@style/MDTEXT"
         android:text="@string/scoringbase"
         android:textAlignment="center"
         android:textSize="15sp"
@@ -75,14 +75,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.577" />
+        app:layout_constraintVertical_bias="0.477" />
 
     <Button
         android:id="@+id/backtohome"
         style="@style/BUTTONS"
         android:layout_width="160dp"
         android:layout_height="70dp"
-        android:fontFamily="@font/baloo_bhaijaan"
+        android:fontFamily="sans-serif-black"
         android:text="@string/back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

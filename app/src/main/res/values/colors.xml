@@ -9,13 +9,15 @@
 
 
     <!-- UI ELEMENTS FOR LIGHT THEME.. -->
-    <color name="light_mode_text">#BC9F8B</color>
+    <color name="light_mode_text">#946658</color>
     <color name="light_mode_mdtext">#4c4c4c</color>
     <color name="light_mode_buttons">#E0C390</color>
     <color name="light_mode_buttons_text">#ffff</color>
-    <color name="light_mode_bar">#674636</color>
+    <color name="light_mode_bar">#BC9F8B </color>
     <color name="light_mode_submit_text">#ffffff</color>
     <color name="light_mode_submit">#7A523F</color>
+    <color name="light_mode_whatami">#D4B18A</color>
+    <color name="light_mode_bar2">#7A523F</color>
 
     <!-- UI ELEMENTS FOR DARK THEME.. -->
     <color name="dark_mode_text">#FFFFFF</color>
@@ -28,4 +30,5 @@
     <color name="dark_primary">#444444</color>
     <color name="dark_primary_dark">#555555</color>
     <color name="dark_accent">#FFC107</color>
+    <color name="dark_mode_whatami">#FFFFFF</color>
 </resources>
