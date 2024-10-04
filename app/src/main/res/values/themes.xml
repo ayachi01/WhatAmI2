@@ -26,6 +26,7 @@
     </style>
 
     <!-- SUBMIT BUTTON for light theme -->
+
     <style name="SUBMIT">
         <item name="android:textColor">@color/light_mode_submit_text</item>
         <item name="android:backgroundTint">@color/light_mode_submit</item>

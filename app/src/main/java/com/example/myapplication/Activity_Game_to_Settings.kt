@@ -9,6 +9,7 @@ import android.media.SoundPool
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -18,7 +19,7 @@ import androidx.core.content.ContextCompat
 
 class Activity_Game_to_Settings : AppCompatActivity() {
 
-    private lateinit var backtogame: Button
+    private lateinit var backtogame: ImageButton
     private lateinit var quit: Button
     private lateinit var ChangeTheme: Button
     private lateinit var sharedPreferences: SharedPreferences
@@ -37,9 +38,10 @@ class Activity_Game_to_Settings : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_game_to_settings)
 
-        this.backtogame = findViewById(R.id.backtogame)
         val soundPool = SoundPool.Builder().build()
         val soundId = soundPool.load(this, R.raw.mouse_click, 1)
+
+        this.backtogame = findViewById(R.id.backtogame)
         backtogame.setOnClickListener {
             soundPool.play(soundId, 1f, 1f, 1, 0, 1f)
             val intent2 = Intent(this, Activity_Game::class.java)
@@ -120,8 +122,6 @@ class Activity_Game_to_Settings : AppCompatActivity() {
             settingstext.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
             musictext.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
             darkmode.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
-            backtogame.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
-            backtogame.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
             ChangeTheme.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
             ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
             quit.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
@@ -129,6 +129,7 @@ class Activity_Game_to_Settings : AppCompatActivity() {
             Restarttext.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
             Restart.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
             Restart.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
+            backtogame.setImageResource(R.drawable.backbutton_dark)
 
         } else {
             // Update UI elements for light mode
@@ -138,8 +139,6 @@ class Activity_Game_to_Settings : AppCompatActivity() {
             settingstext.setTextColor(ContextCompat.getColor(this, R.color.light_mode_text))
             musictext.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
             darkmode.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
-            backtogame.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
-            backtogame.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
             ChangeTheme.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
             ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
             quit.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
@@ -147,6 +146,7 @@ class Activity_Game_to_Settings : AppCompatActivity() {
             Restarttext.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
             Restart.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
             Restart.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
+            backtogame.setImageResource(R.drawable.backbutton)
         }
     }
 }

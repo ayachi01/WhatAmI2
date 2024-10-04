@@ -8,6 +8,7 @@ import android.media.AudioManager
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -17,7 +18,7 @@ import androidx.core.content.ContextCompat
 
 class Activity_Settings : AppCompatActivity() {
 
-    private lateinit var backtogame: Button
+    private lateinit var backtogame: ImageButton
     private lateinit var musicSeekBar: SeekBar
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
@@ -100,10 +101,9 @@ class Activity_Settings : AppCompatActivity() {
             textView.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
             musictext.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
             darkmode.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
-            backtogame.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
-            backtogame.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
             ChangeTheme.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
             ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
+            backtogame.setImageResource(R.drawable.backbutton_dark)
 
         } else {
 
@@ -113,9 +113,9 @@ class Activity_Settings : AppCompatActivity() {
             brownbar.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_bar))
             textView.setTextColor(ContextCompat.getColor(this, R.color.light_mode_text))
             musictext.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
-            backtogame.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
             ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
             ChangeTheme.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
+            backtogame.setImageResource(R.drawable.backbutton   )
         }
     }
 }

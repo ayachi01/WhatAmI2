@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- SEEKBAR COLORS.. -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="dark_thumb">#D1986D</color>
+    <color name="light_thumb">#D0B8A8</color>
+    <color name="progress_color">#AC86F5</color>
+    <color name="sixty_opacity_white">#8CFFFFFF</color>
     <!-- SCREEN LIGHT THEME.. -->
     <color name="screen">#FFF8E8</color>
     <!-- SCREEN DARK THEME.. -->
     <color name="screen.dark">#000000</color>
 
 
+
     <!-- UI ELEMENTS FOR LIGHT THEME.. -->
     <color name="light_mode_text">#946658</color>
     <color name="light_mode_mdtext">#4c4c4c</color>
-    <color name="light_mode_buttons">#E0C390</color>
+    <color name="light_mode_buttons">#D1986D</color>
     <color name="light_mode_buttons_text">#ffff</color>
     <color name="light_mode_bar">#BC9F8B </color>
     <color name="light_mode_submit_text">#ffffff</color>
     <color name="light_mode_submit">#7A523F</color>
     <color name="light_mode_whatami">#D4B18A</color>
     <color name="light_mode_bar2">#7A523F</color>
+    <color name="light_back_button_tint_color">#946658</color>
 
     <!-- UI ELEMENTS FOR DARK THEME.. -->
     <color name="dark_mode_text">#FFFFFF</color>
@@ -31,4 +38,7 @@
     <color name="dark_primary_dark">#555555</color>
     <color name="dark_accent">#FFC107</color>
     <color name="dark_mode_whatami">#FFFFFF</color>
+    <color name="dark_back_button_tint_color">#FFFFFF</color>
+
+
 </resources>
