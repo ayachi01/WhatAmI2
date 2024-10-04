@@ -148,7 +148,7 @@
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:fontFamily="sans-serif-black"
-        android:text="@string/quit"
+        android:text="@string/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

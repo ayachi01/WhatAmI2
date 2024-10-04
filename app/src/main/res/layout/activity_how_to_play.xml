@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo_bhaijaan"
-        android:text="@string/howtoplay"
+        android:text="@string/how_to_play"
         android:textSize="45sp"
         style="@style/TEXT"
         app:layout_constraintBottom_toBottomOf="parent"
