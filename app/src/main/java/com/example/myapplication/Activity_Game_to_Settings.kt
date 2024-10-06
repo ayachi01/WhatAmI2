@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -20,17 +21,16 @@ import androidx.core.content.ContextCompat
 class Activity_Game_to_Settings : AppCompatActivity() {
 
     private lateinit var backtogame: ImageButton
-    private lateinit var quit: Button
+
     private lateinit var ChangeTheme: Button
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
     private lateinit var brownbar: View
-    private lateinit var settingstext: TextView
+    private lateinit var textView: TextView
     private lateinit var musictext: TextView
     private lateinit var darkmode: TextView
     private lateinit var screen: View
-    private lateinit var Restarttext : TextView
-    private lateinit var Restart : Button
+    private lateinit var exit: ImageButton
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,13 +48,20 @@ class Activity_Game_to_Settings : AppCompatActivity() {
             startActivity(intent2)
         }
 
-
-        this.quit = findViewById(R.id.quit)
-        quit.setOnClickListener {
+        this.exit = findViewById(R.id.exit)
+        exit.setOnClickListener{
             soundPool.play(soundId, 1f, 1f, 1, 0, 1f)
             val intent3 = Intent(this, MainActivity::class.java)
             startActivity(intent3)
         }
+
+
+        //this.quit = findViewById(R.id.quit)
+        //quit.setOnClickListener {
+            //soundPool.play(soundId, 1f, 1f, 1, 0, 1f)
+            //val intent3 = Intent(this, MainActivity::class.java)
+            //startActivity(intent3)
+        //}
 
         val audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
         val maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
@@ -89,13 +96,11 @@ class Activity_Game_to_Settings : AppCompatActivity() {
         val isDarkModeEnabled = sharedPreferences.getBoolean("is_dark_mode_enabled", false)
 
         // Initialize views
+        textView = findViewById(R.id.textView)
         brownbar = findViewById(R.id.brownbar)
-        settingstext = findViewById(R.id.settingstext)
         musictext = findViewById(R.id.musictext)
         darkmode = findViewById(R.id.darkmode)
         screen = findViewById(R.id.screen)
-        Restarttext = findViewById(R.id.Restarttext)
-        Restart = findViewById(R.id.Restart)
 
         // Set the dark mode button listener
         ChangeTheme.setOnClickListener {
@@ -113,40 +118,33 @@ class Activity_Game_to_Settings : AppCompatActivity() {
         updateDarkMode(newIsDarkModeEnabled)
     }
 
+    @SuppressLint("ResourceType")
     private fun updateDarkMode(isDarkModeEnabled: Boolean) {
         if (isDarkModeEnabled) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             // Update UI elements for dark mode
             screen.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_screen))
             brownbar.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_bar))
-            settingstext.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
             musictext.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
             darkmode.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
-            ChangeTheme.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
-            ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
-            quit.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
-            quit.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
-            Restarttext.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
-            Restart.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
-            Restart.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
+            ChangeTheme.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
+            ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_settings))
             backtogame.setImageResource(R.drawable.backbutton_dark)
+            textView.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
+            exit.setImageResource(R.drawable.dark_mode_exit)
 
         } else {
             // Update UI elements for light mode
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             screen.setBackgroundColor(ContextCompat.getColor(this, R.color.screen))
             brownbar.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_bar))
-            settingstext.setTextColor(ContextCompat.getColor(this, R.color.light_mode_text))
             musictext.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
             darkmode.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
             ChangeTheme.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
-            ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
-            quit.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
-            quit.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
-            Restarttext.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
-            Restart.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
-            Restart.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
+            ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons_settings))
             backtogame.setImageResource(R.drawable.backbutton)
+            textView.setTextColor(ContextCompat.getColor(this, R.color.light_mode_text))
+            exit.setImageResource(R.drawable.exitbutton)
         }
     }
 }

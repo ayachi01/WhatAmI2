@@ -24,7 +24,15 @@
     <style name="BAR">
         <item name="android:background">@color/light_mode_bar</item>
     </style>
+    <!-- SETTINGS BUTTON for light theme -->
+    <style name="BUTTONSFORSETTINGS">
+        <item name="android:textColor">@color/light_mode_buttons_text</item>
+        <item name="android:backgroundTint">@color/light_mode_buttons_settings</item>
+    </style>
 
+    <style name="SCORE">
+        <item name="android:textColor">@color/light_mode_score</item>
+    </style>
     <!-- SUBMIT BUTTON for light theme -->
 
     <style name="SUBMIT">

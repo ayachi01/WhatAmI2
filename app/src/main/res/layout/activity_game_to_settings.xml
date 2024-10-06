@@ -20,19 +20,48 @@
 
 
     <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="exit"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
+        app:srcCompat="@drawable/exitbutton" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/settingss"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <ImageButton
         android:id="@+id/backtogame"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:background="?android:attr/selectableItemBackground"
         android:contentDescription="@string/back_button"
         android:scaleType="fitCenter"
         android:src="@drawable/backbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <View
         android:id="@+id/brownbar"
@@ -44,21 +73,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
+        app:layout_constraintVertical_bias="0.11" />
 
-    <TextView
-        android:id="@+id/settingstext"
-        style="@style/TEXT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo_bhaijaan"
-        android:text="@string/settingss"
-        android:textSize="45sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03" />
 
     <TextView
         android:id="@+id/musictext"
@@ -74,24 +90,22 @@
         app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
-
+        app:layout_constraintVertical_bias="0.179" />
 
     <SeekBar
         android:id="@+id/music"
         android:layout_width="0dp"
-        android:splitTrack="false"
-        android:max="100"
         android:layout_height="wrap_content"
-        android:thumb="@drawable/seekbar_thumb"
-        android:progressDrawable="@drawable/seekbar_progress"
         android:layout_marginHorizontal="12dp"
+        android:max="100"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:splitTrack="false"
+        android:thumb="@drawable/seekbar_thumb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.281"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.287"
+        app:layout_constraintVertical_bias="0.267"
         app:trackHeight="25dp" />
 
     <TextView
@@ -109,11 +123,11 @@
         app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.355" />
+        app:layout_constraintVertical_bias="0.335" />
 
     <Button
         android:id="@+id/ChangeTheme"
-        style="@style/BUTTONS"
+        style="@style/BUTTONSFORSETTINGS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -123,52 +137,7 @@
         app:layout_constraintHorizontal_bias="0.859"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.358" />
-
-    <TextView
-        android:id="@+id/Restarttext"
-        style="@style/MDTEXT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:padding="14dp"
-        android:text="@string/restart"
-        android:textSize="30sp"
-        android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452" />
-
-    <Button
-        android:id="@+id/quit"
-        style="@style/BUTTONS"
-        android:layout_width="160dp"
-        android:layout_height="70dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
-
-    <Button
-        android:id="@+id/Restart"
-        style="@style/BUTTONS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/restartbuttontext"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.455" />
+        app:layout_constraintVertical_bias="0.34" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

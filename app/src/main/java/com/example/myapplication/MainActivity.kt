@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
     private lateinit var screen: View
-    private lateinit var text: TextView
     private lateinit var howtoplay: Button
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -89,7 +88,6 @@ class MainActivity : AppCompatActivity() {
         updateUI(isDarkModeEnabled)
 
         screen = findViewById(R.id.screen)
-        text = findViewById(R.id.text)
 
         if (isDarkModeEnabled) {
             updateDarkModeUI()
@@ -112,7 +110,6 @@ class MainActivity : AppCompatActivity() {
         settings.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
         settings.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
         screen.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_screen))
-        text.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_whatami))
         howtoplay.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
         howtoplay.setTextColor(ContextCompat.getColor(this,R.color.dark_mode_buttons_text))
     }
@@ -123,7 +120,6 @@ class MainActivity : AppCompatActivity() {
         settings.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
         settings.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
         screen.setBackgroundColor(ContextCompat.getColor(this, R.color.screen))
-        text.setTextColor(ContextCompat.getColor(this, R.color.light_mode_whatami))
     }
 
     override fun onResume() {

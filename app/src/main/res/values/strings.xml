@@ -14,7 +14,7 @@
     <string name="lives">Lives:</string>
     <string name="timer">Timer:</string>
     <string name="best">Best</string>
-    <string name="score">Score</string>
+    <string name="score">SCORE:</string>
     <string name="submit">Submit</string>
     <string name="change_theme">Change</string>
     <string name="restart">Restart:</string>
@@ -23,4 +23,6 @@
     <string name="scoringbase"> There are 25 points available to you. Points are awarded for each accurate response, with easy answers worth one point, medium answers worth three, and hard answers worth five. Your score drops by one point for an incorrect response. If your score hits zero, the game is over. Try to score as high as you can!</string>
     <string name="back_button">Back Button</string>
     <string name="how_to_play">HOW TO PLAY</string>
+    <string name="logo">logo</string>
+    <string name="resetbutton">resetbutton</string>
 </resources>

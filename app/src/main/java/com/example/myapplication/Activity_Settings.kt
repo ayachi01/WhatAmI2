@@ -101,8 +101,8 @@ class Activity_Settings : AppCompatActivity() {
             textView.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_text))
             musictext.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
             darkmode.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_mdtext))
-            ChangeTheme.setTextColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_text))
-            ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons))
+            ChangeTheme.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
+            ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.dark_mode_buttons_settings))
             backtogame.setImageResource(R.drawable.backbutton_dark)
 
         } else {
@@ -113,9 +113,9 @@ class Activity_Settings : AppCompatActivity() {
             brownbar.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_bar))
             textView.setTextColor(ContextCompat.getColor(this, R.color.light_mode_text))
             musictext.setTextColor(ContextCompat.getColor(this, R.color.light_mode_mdtext))
-            ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons))
+            ChangeTheme.setBackgroundColor(ContextCompat.getColor(this, R.color.light_mode_buttons_settings))
             ChangeTheme.setTextColor(ContextCompat.getColor(this, R.color.light_mode_buttons_text))
-            backtogame.setImageResource(R.drawable.backbutton   )
+            backtogame.setImageResource(R.drawable.backbutton )
         }
     }
 }

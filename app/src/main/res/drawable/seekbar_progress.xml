@@ -26,11 +26,7 @@
                 android:gravity="left">
 
                 <shape android:shape="rectangle">
-                    <gradient
-                        android:angle="270"
-                        android:startColor="@color/dark_thumb"
-                        android:endColor="@color/light_thumb"
-                        android:type="linear"/>
+                    <solid android:color="@color/progress_color" />
                     <corners android:radius="8dp"/>
                 </shape>
 
