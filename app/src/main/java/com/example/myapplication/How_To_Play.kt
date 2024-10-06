@@ -8,6 +8,7 @@ import android.media.SoundPool
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +17,7 @@ import androidx.core.content.ContextCompat
 
 class How_To_Play : AppCompatActivity() {
 
-    private lateinit var backtohome: Button
+    private lateinit var backtogame: ImageButton
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
     private lateinit var screen: View
@@ -35,8 +36,8 @@ class How_To_Play : AppCompatActivity() {
         val soundPool = SoundPool.Builder().build()
         val soundId = soundPool.load(this, R.raw.mouse_click, 1)
 
-        this.backtohome = findViewById(R.id.backtohome)
-        backtohome.setOnClickListener {
+        this.backtogame = findViewById(R.id.backtogame)
+        backtogame.setOnClickListener {
             soundPool.play(soundId, 1f, 1f, 1, 0, 1f)
             val intent1 = Intent(this, MainActivity::class.java)
             startActivity(intent1)
@@ -72,8 +73,7 @@ class How_To_Play : AppCompatActivity() {
         screen.setBackgroundColor(ContextCompat.getColor(this,R.color.dark_screen))
         textView.setTextColor(ContextCompat.getColor(this,R.color.dark_mode_text))
         brownbar.setBackgroundColor(ContextCompat.getColor(this,R.color.dark_mode_bar))
-        backtohome.setBackgroundColor(ContextCompat.getColor(this,R.color.dark_mode_buttons))
-        backtohome.setTextColor(ContextCompat.getColor(this,R.color.dark_mode_buttons_text))
+        backtogame.setImageResource(R.drawable.backbutton_dark)
         instructions.setTextColor(ContextCompat.getColor(this,R.color.dark_mode_mdtext))
         scoringbase.setTextColor(ContextCompat.getColor(this,R.color.dark_mode_mdtext))
 
@@ -82,8 +82,7 @@ class How_To_Play : AppCompatActivity() {
         screen.setBackgroundColor(ContextCompat.getColor(this,R.color.screen))
         textView.setTextColor(ContextCompat.getColor(this,R.color.light_mode_text))
         brownbar.setBackgroundColor(ContextCompat.getColor(this,R.color.light_mode_bar))
-        backtohome.setBackgroundColor(ContextCompat.getColor(this,R.color.light_mode_buttons))
-        backtohome.setTextColor(ContextCompat.getColor(this,R.color.light_mode_buttons_text))
+        backtogame.setImageResource(R.drawable.backbutton)
         instructions.setTextColor(ContextCompat.getColor(this,R.color.light_mode_mdtext))
         scoringbase.setTextColor(ContextCompat.getColor(this,R.color.light_mode_mdtext))
 
