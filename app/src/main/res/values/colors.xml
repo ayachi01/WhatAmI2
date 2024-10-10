@@ -27,6 +27,7 @@
     <color name="light_mode_bar2">#7A523F</color>
     <color name="light_back_button_tint_color">#946658</color>
     <color name="light_mode_score">#946658</color>
+    <color name="light_mode_toolbar">#FFFFFF</color>
 
     <!-- UI ELEMENTS FOR DARK THEME.. -->
     <color name="dark_mode_text">#F4F4F4</color>
