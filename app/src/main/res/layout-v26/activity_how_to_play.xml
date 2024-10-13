@@ -47,6 +47,7 @@
         style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:fontFamily="sans-serif-black"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="1dp"
@@ -95,8 +96,8 @@
 
     <ImageButton
         android:id="@+id/backtogame"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:background="?android:attr/selectableItemBackground"
         android:contentDescription="@string/back_button"
         android:scaleType="fitCenter"
